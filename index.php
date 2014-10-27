@@ -14,16 +14,35 @@
 	</style>
 </head>
 <body>
-	<form action="index.php" method="post">
-		<div class="form_field">
-				<?php if ($isSubmitted){
-					echo $usernameMessage;
+	<div class="form_message">
+				<?php 
+					if ($isSubmitted) {
+						echo $usernameMessage;
 				}
+					if ($isSubmitted) {
+						echo $ageMessage;
+				}
+					if ($isSubmitted) {
+						echo $drinkMessage;
+				}	
+					if ($isSubmitted) {
+						echo $emailMessage;
+				}
+	      
 				?>
-			
+	</div>	
+	<form action="index.php" method="post">
 		<span>Kasutajanimi:</span>
 			<input type="text" name="username">
-		</div>
+			<br>
+		<span>Vanus:</span>
+			<input type="text" name="age">
+			<br>
+		<span>Joogid:</span>
+			<input type="text" name="drink">
+			<br>	
+		<span>Email:</span>
+			<input type="text" name="email">
 		<div class="form_field">
 			<input type="submit" name="submit" value="Saada">
 		</div>
